@@ -10,49 +10,48 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_06_25_064721) do
-  create_table "attachments", charset: "utf8mb3", collation: "utf8mb3_general_ci", force: :cascade do |t|
-    t.integer "email_id"
-    t.string "filename"
-    t.string "mime_type"
-    t.integer "file_size"
-    t.string "file_url"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+ActiveRecord::Schema[7.1].define(version: 20_240_625_064_721) do
+  create_table 'attachments', charset: 'utf8mb3', collation: 'utf8mb3_general_ci', force: :cascade do |t|
+    t.integer 'email_id'
+    t.string 'filename'
+    t.string 'mime_type'
+    t.integer 'file_size'
+    t.string 'file_url'
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
   end
 
-  create_table "email_deliveries", charset: "utf8mb3", collation: "utf8mb3_general_ci", force: :cascade do |t|
-    t.integer "email_id"
-    t.string "status"
-    t.datetime "sent_at"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+  create_table 'email_deliveries', charset: 'utf8mb3', collation: 'utf8mb3_general_ci', force: :cascade do |t|
+    t.integer 'email_id'
+    t.string 'status'
+    t.datetime 'sent_at'
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
   end
 
-  create_table "email_templates", charset: "utf8mb3", collation: "utf8mb3_general_ci", force: :cascade do |t|
-    t.string "name"
-    t.text "body"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+  create_table 'email_templates', charset: 'utf8mb3', collation: 'utf8mb3_general_ci', force: :cascade do |t|
+    t.string 'name'
+    t.text 'body'
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
   end
 
-  create_table "emails", charset: "utf8mb3", collation: "utf8mb3_general_ci", force: :cascade do |t|
-    t.integer "sender_id"
-    t.text "recipient_ids"
-    t.string "subject"
-    t.text "body"
-    t.datetime "sent_at"
-    t.boolean "read"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+  create_table 'emails', charset: 'utf8mb3', collation: 'utf8mb3_general_ci', force: :cascade do |t|
+    t.integer 'sender_id'
+    t.text 'recipient_ids'
+    t.string 'subject'
+    t.text 'body'
+    t.datetime 'sent_at'
+    t.boolean 'read'
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
   end
 
-  create_table "users", charset: "utf8mb3", collation: "utf8mb3_general_ci", force: :cascade do |t|
-    t.string "name"
-    t.string "email"
-    t.string "password_digest"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+  create_table 'users', charset: 'utf8mb3', collation: 'utf8mb3_general_ci', force: :cascade do |t|
+    t.string 'name'
+    t.string 'email'
+    t.string 'password_digest'
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
   end
-
 end

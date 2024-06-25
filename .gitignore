@@ -31,3 +31,9 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+
+#Emviroment variables
+local_env.yml
+
+# Ignore application configuration
+/config/application.yml

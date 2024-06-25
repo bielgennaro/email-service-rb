@@ -1,0 +1,23 @@
+development:
+  adapter: mysql2
+  encoding: utf8
+  username: root
+  password: root
+  database: email_service_development
+  host: localhost
+
+test:
+  adapter: mysql2
+  encoding: utf8
+  username: root
+  password: root
+  database: email_service_test
+  host: localhost
+
+production:
+  adapter: mysql2
+  encoding: utf8
+  username: root
+  password: root
+  database: email_service_production
+  host: localhost
